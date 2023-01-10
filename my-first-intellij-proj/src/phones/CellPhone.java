@@ -10,12 +10,53 @@ public class CellPhone
 
     //constructor(s)
     public CellPhone(String brand, int volume,
-                     String chargingPort, double storageInGigs)
+                     String chargingPort,
+                     double storageInGigs)
     {
         //assign the field to the matching parameter
         this.brand = brand;
         this.volume = volume;
         this.chargingPort = chargingPort;
+        this.storageInGigs = storageInGigs;
+    }
+
+    public String getBrand()
+    {
+        return brand;
+    }
+
+    public int getVolume()
+    {
+        return volume;
+    }
+
+    public String getChargingPort()
+    {
+        return chargingPort;
+    }
+
+    public double getStorageInGigs()
+    {
+        return storageInGigs;
+    }
+
+    public void setBrand(String brand)
+    {
+        this.brand = brand;
+    }
+
+    public void setVolume(int volume)
+    {
+        this.volume = volume;
+    }
+
+    public void setChargingPort(String chargingPort)
+    {
+        this.chargingPort = chargingPort;
+    }
+
+    public void setStorageInGigs(double storageInGigs)
+    {
         this.storageInGigs = storageInGigs;
     }
 
