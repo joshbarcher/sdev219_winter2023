@@ -4,7 +4,7 @@ public class CellPhone
 {
     //fields
     private String brand;
-    private int volume;
+    private int volume; //between 0-10
     private String chargingPort;
     private double storageInGigs;
 
@@ -15,9 +15,11 @@ public class CellPhone
     {
         //assign the field to the matching parameter
         this.brand = brand;
-        this.volume = volume;
         this.chargingPort = chargingPort;
         this.storageInGigs = storageInGigs;
+
+        //use the setter for volume to prevent bad values
+        setVolume(volume);
     }
 
     public String getBrand()
@@ -47,7 +49,10 @@ public class CellPhone
 
     public void setVolume(int volume)
     {
-        this.volume = volume;
+        if (volume >= 0 && volume <= 10)
+        {
+            this.volume = volume;
+        }
     }
 
     public void setChargingPort(String chargingPort)
@@ -70,6 +75,6 @@ public class CellPhone
     //this converts the object to a string (and returns the string)
     public String toString()
     {
-        return "phones.CellPhone - " + brand;
+        return "CellPhone - " + brand;
     }
 }
