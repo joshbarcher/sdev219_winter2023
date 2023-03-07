@@ -1,10 +1,12 @@
-public class Main
+package recursion;
+
+public class SimpleRecursion
 {
     private int methodCount;
 
     public static void main(String[] args)
     {
-        Main program = new Main();
+        SimpleRecursion program = new SimpleRecursion();
 
         //start "recursing"
         String[] words = {"Circumlocution", "Percolate", "Extraneous", "Onomatopoeia", "Panegyrize", "Overmorrow"};
